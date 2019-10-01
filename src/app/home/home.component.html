@@ -1,0 +1,29 @@
+
+<!-- add class to the tag on click-->
+<!-- <h1 [class.clicked]="clickedNow">home works!</h1> -->
+
+<!-- switch class on click -->
+<!-- <h1 [ngClass]="{
+  'clicked' : clickedNow,
+  'unclicked' : !clickedNow
+}">home works!</h1> -->
+
+<!-- toggle style binding -->
+<!-- <h1 [style.color]="clickedNow ? 'gray': 'black'">home works!</h1> -->
+
+<!-- ngStyle -->
+<!-- <h1 [ngStyle]="{
+'color': clickedNow ? 'black' : 'red',
+'font-size': clickedNow ? '5em' : '2em'
+}">home works!</h1> -->
+<!-- <button class="btn btn-primary" (click)="firstClickk()">Click here</button> -->
+
+<!-- API Integration -->
+<h1>Users</h1>
+
+<ul *ngIf="users"> 
+  <li *ngFor="let user of users.data">
+    <img [src]="user.avatar">
+    <p>{{ user.first_name }} {{ user.last_name }}</p>
+  </li>
+</ul>
